@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <style type="text/css">
+  	*{
+  padding:0px;
+  margin:0px;
+}
+body{
+  padding-bottom:15%;
+  padding-top:14%;
+}
+.header{
+  display: block;
+  background: rgb(0, 134, 35);
+  color:white;
+  width:100%;
+  height:8%;
+  position:fixed;
+  top:0px;
+  left:0px;
+  font-size:16px;
+
+}
+.header input{
+  display: inline-block;
+  background: rgba(0,0,0,0.3);
+  outline: none;
+  border-width: none;
+  border-radius: 20px;
+  width:80%;
+  height:50%;
+  margin-left:5%;
+  margin-right: 4%;
+  margin-top:4%;
+  border:none;
+  padding-left:10px;
+  font-size:16px;
+  color:white;
+}
+.header ipnut:focus{
+  border:1px solid white;
+}
+.footer{
+  display: block;
+  height:7%;
+background: rgba(0, 0, 0, 0.95);
+  color:white;
+  width:100%;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+
+}
+.footer ul{
+  width:100%;
+  height:100%;
+  list-style: none;
+}
+.footer ul li {
+  display: block;
+  float:left;
+  width:25%;
+  height:100%;
+
+  text-align: center;
+  font-size: 24px;
+}
+
+.footer ul li div {
+  display: block;
+  width:100%;
+  text-align: center;
+  height: 10%;
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+.carousel{
+
+  width:100%;
+  height:20%;
+}
+.carousel img{
+  width:100%;
+  height:100%;
+}
+.carousel .imgs ul{
+  position: absolute;
+  top:25%;
+  left:80%;
+  width:20%;
+}
+.carousel .imgs ul li{
+  display: inline-block;
+  width:10px;
+  height:10px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+}
+.title{
+  width:100%;
+  height:5%;
+  font-size: 12px;
+  text-align: center;
+  padding-top:15px;
+  padding-bottom: 15px;
+  color:rgba(0,0,0,0.8);
+}
+.worklist{
+  width:100%;
+  height:auto;
+
+}
+.workbox{
+  width:100%;
+  height:30%;
+
+  background: rgba(146, 118, 118, 0.22);
+  margin-bottom: 20px;
+}
+.worklist ul li .workPosition,.workPlaces,.company,.level{
+  width:100%;
+  height: 25%;
+  font-size:20px;
+}
+.workPlaces {
+  font-size:14px;
+}
+.worklist ul li .floatRight{
+ margin-left:55%;
+
+}
+.worklist ul li .salary{
+  color:orange;
+}
+.workPlaces  span{
+  border-right: 2px solid gray;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.workPlaces .floatRight1{
+  margin-left:30%;
+  color:gray;
+  border-right:none;
+}
+.workPlaces {
+  clear:both;
+}
+.tips{
+  display: inline-block;
+  width:14%;
+  height:10%;
+  font-size: 14px;
+  background: gray;
+  text-align: center;
+  color:white;
+
+  border-radius: 5px;
+  margin:10px 5px;
+}
+.company{
+
+}
+.companyName{
+  width:100%;
+  height:70%;
+}
+.companyName{
+  display: inline-block;
+  width:20%;
+}
+.companyName img{
+  width: 100%;
+  height:100%;
+  border-radius: 4px;
+}
+.companyInfo{
+  padding-top:5px;
+  font-size: 18px;
+  text-align: center;
+  display: inline-block;
+  float:right;
+  width:80%;
+}
+.companyType{
+  color:gray;
+  font-size: 14px;
+  padding-top:8px;
+
+}
+.companyType span{
+  border-right: 2px solid gray;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+  	
+  </style>
+  <title>Document</title>
+</head>
+<body>
+    <div app-header class="header">
+    	   <input type="text" placeholder="搜索您想找的职位" id="searchWork" class="searchWork"><i class="fa fa-search"></i>
+    </div>
+	<div app-carousel class="carousel">  <div class="imgs">
+    <img src="image/1.png" alt="">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div></div>
+	<div app-title class="title">  <div>
+    <h2>-------自动为您推荐的职位信息-------</h2>
+  </div></div>
+	<div app-worklist class="worklist"><div >
+    <ul>
+      <li class="workbox">
+        <div class="workPosition"><span>前端工程师</span><span  class="floatRight salary">9-12K</span></div>
+        <div class="workPlaces"><span style="padding-left:0px;">广州市天河区</span><span>1-3年</span><span style="border:none;">本科</span><span class="floatRight1">7月21日</span></div>
+        <div class="level"><span class="tips">初级</span><span class="tips">初级</span></div>
+        <div class="company">
+          <div class="companyName" ><img src="image/2.png" alt="公司图片"></div>
+          <div class="companyInfo">
+            <span>海纳科技有限公司</span> <p class="companyType"> <span>未融资</span><span>2000人以上</span><span style="border:none;">互联网IT</span></p>
+          </div>
+        </div>
+      </li>
+      <li class="workbox">
+        <div class="workPosition"><span>全栈工程师</span><span  class="floatRight salary">10-18K</span></div>
+        <div class="workPlaces"><span style="padding-left:0px;">广州市天河区</span><span>1-3年</span><span style="border:none;">本科</span><span class="floatRight1">7月21日</span></div>
+        <div class="level"><span class="tips">初级</span><span class="tips">初级</span></div>
+        <div class="company">
+          <div class="companyName" ><img src="image/3.png" alt="公司图片"></div>
+          <div class="companyInfo">
+            <span>神技科技有限公司</span> <p class="companyType"> <span>未融资</span><span>2000人以上</span><span style="border:none;">互联网IT</span></p>
+          </div>
+        </div>
+      </li>
+      <li class="workbox">
+        <div class="workPosition"><span>后台工程师</span><span  class="floatRight salary">9-12K</span></div>
+        <div class="workPlaces"><span style="padding-left:0px;">广州市天河区</span><span>1-3年</span><span style="border:none;">本科</span><span class="floatRight1">7月21日</span></div>
+        <div class="level"><span class="tips">初级</span><span class="tips">初级</span></div>
+        <div class="company">
+          <div class="companyName" ><img src="image/4.png" alt="公司图片"></div>
+          <div class="companyInfo">
+            <span>百川科技有限公司</span> <p class="companyType"> <span>未融资</span><span>2000人以上</span><span style="border:none;">互联网IT</span></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div></div>
+	<div app-footer class="footer">  <ul>
+    <li><i class="fa fa-home"></i><div>首页</div></li>
+    <li><i class="fa fa fa-commenting-o"></i><div>消息</div></li>
+    <li><i class="fa fa-edit"></i><div>简历</div></li>
+    <li><i class=" fa fa-user-circle"></i><div>我</div></li>
+
+  </ul></div>
+</body> -->
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script> -->
+<script type="text/javascript">
+     //px to em
+    document.getElementsByTagName('html')[0].style.fontSize=window.screen.width/10+'px';
+
+
+
+
+
+
+</script>
+</html>
